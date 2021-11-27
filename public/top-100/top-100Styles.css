@@ -13,6 +13,9 @@
     color: #24D495;
 }
 
+.navbar {
+    z-index: 999;
+}
 .top-100-movie-list {
     margin-top: 100px;
     justify-content: left;
