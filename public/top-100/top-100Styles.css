@@ -99,7 +99,6 @@
     text-align: left;
     font-family: inherit;
     margin-top: 2px;
-    
 }
 
 @media(max-width:767px){
@@ -221,4 +220,82 @@
 }
 #radio4:checked ~ .navigation-auto .auto-btn{
     background: whitesmoke;
+}
+
+/* Faith Playing aroung with the Carousel */
+.outer {
+    margin: 0 auto;
+    width: 100%;
+}
+#big .item {
+    margin: 2px;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+}
+.owl-theme .owl-nav [class*="owl-"] {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.owl-theme .owl-nav [class*="owl-"].disabled:hover {
+    background-color: #d6d6d6;
+}
+#big.owl-theme {
+    position: relative;
+}
+#big.owl-theme .owl-next,
+#big.owl-theme .owl-prev {
+    background: #333;
+    color: #fff;
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 0;
+}
+#big.owl-theme .owl-next:hover,
+#big.owl-theme .owl-prev:hover {
+    background: #909cea;
+    color: #fff;
+}
+#big.owl-theme .owl-prev {
+    left: 10px;
+}
+#big.owl-theme .owl-next {
+    right: 10px;
+}
+#thumbs .item {
+    margin: 2px;
+    transition: all 0.2s ease-in-out;
+    filter: brightness(0.4);
+    cursor: pointer;
+}
+#thumbs .current .item {
+    filter: brightness(1);
+}
+#thumbs .item h1 {
+    font-size: 18px;
+}
+#thumbs.owl-theme .owl-next,
+#thumbs.owl-theme .owl-prev {
+    background: #333;
+}
+#big .item img {
+    max-height: 600px;
+}
+#thumbs .item img {
+    max-height: 80px;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+#thumbs .owl-stage{
+    margin: 0 auto;
 }

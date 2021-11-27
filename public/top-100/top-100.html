@@ -9,6 +9,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="../styles.css"/>
     <link rel="stylesheet" href="top-100Styles.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Top 100</title>
 </head>
 
@@ -48,47 +60,31 @@
             </div>
         </nav>
         
-        <!--image slider start-->
-        <div class="slider">
-            <div class="slides">
-                <!--radio button start-->
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
-                <!--radio button end-->
-                <!--slide images start-->
-                <div class="slide first">
-                    <img id="#slide1" src="">
-                </div>
-                <div class="slide">
-                    <img src="./images/batman.jpg"  id= "#slide2">
-                </div>
-                <div class="slide">
-                    <img src="./images/django.jpg"  id= "#slide3">
-                </div>
-                <div class="slide">
-                    <img src="./images/spider-verse.jpg"  id= "#slide4">
-                </div>
-                <!--slide images end-->
-                <!--automatic nav start-->
-                <div class="navigation-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                    <div class="auto-btn4"></div>
-                </div>
-                <!--automatic nav end-->
+        <div class="outer">
+            <!-- <div id="counter"></div> -->
+            <div id="big" class="owl-carousel owl-theme">
+              <div class="item">
+                <img src="./images/batman.jpg" />
+              </div>
+              <div class="item">
+                <img src="./images/django.jpg" />
+              </div>
+              <div class="item"> 
+                <img src="./images/spider-verse.jpg" />
+              </div>
             </div>
-            <!--manual navigation start-->
-            <div class="navigation-manual">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
+            <div id="thumbs" class="owl-carousel owl-theme">
+              <div class="item">
+                <img src="./images/batman.jpg" />
+              </div>
+              <div class="item">
+                <img src="./images/django.jpg" />
+              </div>
+              <div class="item">
+                <img src="./images/spider-verse.jpg" />
+              </div>
             </div>
-            <!--manual navigation end-->
-        </div>
+          </div>
         <!--image slider end-->
         <!-- Styling the list-->
         <div class="top-100-movie-list">
@@ -110,5 +106,7 @@
             </div> -->
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.min.js"></script>
     <script src="top-100Script.js"></script>
 </body>
