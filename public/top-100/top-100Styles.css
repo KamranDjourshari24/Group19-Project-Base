@@ -217,6 +217,6 @@
 #radio3:checked ~ .navigation-auto .auto-btn3{
     background: whitesmoke;
 }
-#radio4:checked ~ .navigation-auto .auto-btn{
+#radio4:checked ~ .navigation-auto .auto-btn4{
     background: whitesmoke;
 }
