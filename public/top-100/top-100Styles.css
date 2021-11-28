@@ -147,18 +147,18 @@
 }
 .slide img{
     width: 100%;
-    height: inherit;
+    height: 410px;
     object-fit: fill;
-    
 }
 /*css for manual navigation slides*/
 
 .navigation-manual{
     position: absolute;
     width: 100%;
-    margin-top: -40px;
+    margin-top: -71px;
     display: flex;
     justify-content: center;
+    margin-left: -80px;
 }
 .manual-btn{
     border: 2px solid whitesmoke;
@@ -195,7 +195,8 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 360px;
+    margin-top: 380px;
+    margin-left: -80px;
 }
 .navigation-auto div{
     border: 2px solid whitesmoke;

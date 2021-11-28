@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log(top100List);
   imageExtractor(top100List);
 
-  const movieList = ['Avengers:+Endgame', 'The+Dark+Knight', 'Django+Unchained', 'Spider-Man:+Into+the+Spider-Verse'];
+  const movieList = ['Avengers: Endgame', 'The Dark Knight', 'Django Unchained', 'Spider-Man: Into the Spider-Verse'];
   let movieCounter = 1;
   async function getImage(titleList) {
     await Promise.all(titleList.map(async (title) => {
@@ -105,6 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const slide = document.getElementById(slideShow);
       slide.src = imgSource;
       slide.alt = title;
+      const slideTitle = `#title${movieCounter}`;
+      const movieName = document.getElementById(slideTitle);
+      movieName.innerHTML = title;
       movieCounter += 1;
     }));
   }
