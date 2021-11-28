@@ -123,6 +123,9 @@
     margin-top: 35px;
     top: 30px;
     }
+    #big .item img{
+        height: 300px;
+    }
 }
 .navigation-auto{
     display:none;
