@@ -290,7 +290,9 @@
     background: #333;
 }
 #big .item img {
-    max-height: 600px;
+    width: 100%;
+    height: inherit;
+    object-fit: fill;
 }
 #thumbs .item img {
     max-height: 80px;
