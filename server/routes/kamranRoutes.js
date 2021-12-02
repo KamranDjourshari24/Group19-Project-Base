@@ -56,6 +56,7 @@ router.route('/films')
           film_title: req.body.film_title,
           release_date: req.body.release_date,
           genreid: genreId,
+          rating: req.body.imdbRating,
           filmid: filmId
         },
         type: sequelize.QueryTypes.UPDATE

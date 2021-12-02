@@ -5,16 +5,13 @@
     font-family: 'Acme';
 }
 
-
 .box{
     background-color: lightgray;
     display: flex;
     justify-content: center;
-    margin-top: 3%;
     margin-right: 15%;
     margin-left: 15%;
-    flex-flow: column wrap;
-    
+    flex-flow: column wrap;  
 }
 
 .inputfield{
@@ -25,30 +22,8 @@
     align-items: center;
 }
 
-/* 
-.name-field{
-    width: 700px;
-    margin-left: 20%;
-    margin-top: 20px;
-
-}
-
-.email-field{
-    width: 700px;
-    margin-top: 10px;
-    margin-left: 20%;
-}
-
-.movie-field{
-    width: 700px;
-    margin-top: 10px;
-    margin-left: 20%;
-}
-
-.director-field{
-    width: 700px;
-    margin-top: 10px;
-    margin-left: 20%;
+.tab-menu {
+    padding-top: 20px;
 }
 
 

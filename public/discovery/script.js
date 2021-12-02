@@ -13,11 +13,9 @@ async function dataHandler() {
 
   async function buttonHandler() {
     const genreBox = document.getElementById('genre-input').value;
-    console.log(genreBox)
     if (genreBox === 'Select Genre') {
       const apiRequestFilms = await fetch('/api/films');
       const filmsJson = await apiRequestFilms.json();
-      console.log(filmsJson)
       return filmsJson;
     }
     const apiRequestFilms = await fetch('../api/genremovies', {
@@ -30,7 +28,7 @@ async function dataHandler() {
     const filmsJson = await apiRequestFilms.json();
     return filmsJson;
   }
-  const searchButton = document.querySelector('.searchButton');
+  const searchButton = document.getElementById('searchButton');
   const columns = document.querySelector('.columnsMovies');
   const searchInput = document.querySelector('.search');
 
@@ -72,7 +70,6 @@ async function dataHandler() {
       // console.log(posterPath)
       const imageRequest = await fetch(`https://image.tmdb.org/t/p/w342/${posterPath}`);
       const img = await imageRequest.blob();
-      console.log(img);
       return img;
     } catch {
       return false;
@@ -83,30 +80,27 @@ async function dataHandler() {
     // return imgSource;
   }
 
-
   // add html elements of movies
   async function appendMovieBox(film) {
     const image = await getImage(film.film_title);
-    console.log(image);
     if (image) {
       const image2 = URL.createObjectURL(image);
       const html = `<div class="box">
       <div class="movieBox">
       <img src=${image2} alt=${'alt'}>
       </div>
-      <div>${film.film_title} : Rating (${film.imdb_rating})<div>
+      <div class="filmMovie has-text-centered">${film.film_title} : Rating (${film.imdb_rating})<div>
     </div>`;
-    columns.innerHTML += html
-    }
-    else {
-      const image2 = '../images/empty-show-curtains.jpg'
+      columns.innerHTML += html;
+    } else {
+      const image2 = '../images/empty-show-curtains.jpg';
       const html = `<div class="box">
-      <div class="movieBox">
+      <div class="movieBox filmMovie">
       <img src=${image2} alt=${'alt'}>
       </div>
       <div>${film.film_title} : Rating (${film.imdb_rating})<div>
     </div>`;
-    columns.innerHTML += html;
+      columns.innerHTML += html;
     }
     //  <img src=${src} alt=${alt}>
   }
@@ -116,7 +110,6 @@ async function dataHandler() {
   async function submitSearch() {
     columns.innerHTML = '';
     const filmMatches = await findMatches(searchInput.value);
-    console.log(filmMatches);
     filmMatches.forEach((film) => appendMovieBox(film));
   }
 
