@@ -11,7 +11,7 @@ FROM films f
     USING(genre_id)`;
 
 const filmPut = `UPDATE films 
-  SET film_title = :film_title, release_date = :release_date, genre_id = :genreid
+  SET film_title = :film_title, release_date = :release_date, genre_id = :genreid, imdb_rating = :rating
   WHERE film_id = :filmid`;
 
 const filmPost = `INSERT INTO films (film_id, film_title, release_date, genre_id, imdb_rating, director_id) 

@@ -12,18 +12,6 @@ function getRowByIdActorLinking(object, value) {
   const rows = object.filter((item) => item.actors_linking_id === value);
   return rows;
 }
-function getRowByActorId(object, value) {
-  const rows = object.filter((item) => item.actor_id == value);
-  return rows;
-}
-function changeActorName(object, value) {
-  object.forEach(((item) => item.actor_name = value));
-  return object;
-}
-function updateActorInMovie(object, value) {
-  const changeActor = object.actor_id = value;
-  return changeActor;
-}
 
 // Actors_Linking Endpoints
 const actorLinkingMsg = 'touched /actors_linking with ';
@@ -96,14 +84,17 @@ expressRouter.route('/actors_linking')
 // delete a row based on actors_linking_id arg
   .delete(async (req, res) => {
     try {
-      const idToDelete = req.body.actors_linking_id;
+      const filmStatement = `SELECT * FROM films WHERE film_title = "${req.body.film_title}"`;
+      const selectedMovie = await db.sequelizeDB.query(filmStatement, {
+        type: sequelize.QueryTypes.SELECT
+      });
+      const filmId = selectedMovie.map((movId) => movId.film_id)[0];
       const deleteStatement = `DELETE FROM actors_linking
-      WHERE actors_linking_id = ${idToDelete}`;
-      res.json({message: `${actorLinkingMsg} DELETE`});
+      WHERE film_id = '${filmId}'`;
       await db.sequelizeDB.query(deleteStatement, {
         type: sequelize.QueryTypes.DELETE
       });
-      res.send('Deleted "${req.body.acrots_linking_id');
+      res.send(`Deleted Actors in Actors_linking table from ${req.body.film_title}`);
     } catch (error) {
       console.log(error);
       res.json({error: errorMsg});
