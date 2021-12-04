@@ -65,16 +65,12 @@
     align-items: center;
     margin-bottom: auto;
     font-size: 20px;
-}
-
-.box {
-  display: flex;
-  justify-content: center;
-  width: 450px;
-  height: 240px;
-  margin-right: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+    justify-content: center;
+    width: 450px;
+    height: 240px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .movieBox {
@@ -99,8 +95,8 @@
 .search {
   font-family: 'Acme';
   width: 200px;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .searchGrid>* {
@@ -113,4 +109,6 @@
     margin-left:auto;
     margin-bottom: 50px;
     border-color: black;
+    display: flex;
+    justify-content: space-between;
   }
