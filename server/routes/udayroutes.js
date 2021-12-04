@@ -17,7 +17,7 @@ function getGenreByValue(object, value) {
 function getTableRows(table) {
   return `SELECT * FROM ${table}`;
 }
-  
+
 /// /////////////////////////////////
 /// ////Genre Endpoints////////
 /// /////////////////////////////////
@@ -37,8 +37,8 @@ router.route('/genre')
   .put(async (req, res) => {
     try {
       const updateStatement = `UPDATE genre 
-      SET genre_id = '${req.body.genre_id}', genre = '${req.body.genre}'
-      WHERE genre_id = '${req.body.genre}' `;
+      SET genre = '${req.body.genre}'
+      WHERE genre_id = '${req.body.genre_id}' `;
       await db.sequelizeDB.query(updateStatement, {
         type: sequelize.QueryTypes.UPDATE
       });
@@ -62,7 +62,7 @@ router.route('/genre')
         type: sequelize.QueryTypes.INSERT
       });
 
-      res.send(`"${req.body.genre}" Successfully Updated`);
+      res.send(`"${req.body.genre}" Successfully Created`);
     } catch (error) {
       console.log(error);
       res.json({error: 'Something went wrong on the server w/ /genre POST'});

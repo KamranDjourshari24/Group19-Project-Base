@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 import express from 'express';
 import db from './server/database/initializeDB.js';
-import apiRoutes from './server/routes/apiRoutes.js';
 import danielRoutes from './server/routes/danielRoutes.js';
 import faithRoutes from './server/routes/faithRoutes.js';
 import joshuaRoutes from './server/routes/joshuaRoutes.js';
@@ -20,7 +19,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static(staticFolder));
-app.use('/api', apiRoutes);
 app.use('/api', danielRoutes);
 app.use('/api', faithRoutes);
 app.use('/api', joshuaRoutes);
