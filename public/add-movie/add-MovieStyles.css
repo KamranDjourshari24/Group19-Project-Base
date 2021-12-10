@@ -26,5 +26,13 @@
     padding-top: 20px;
 }
 
+.helper {
+    font-size: .75rem;
+    margin-top: 0.25rem;
+}
+
+.helper.is-danger {
+    color: #f14668;
+}
 
 
