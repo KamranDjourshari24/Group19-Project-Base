@@ -74,7 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
 async function chartDisplay() {
   const response = await fetch('./api/films');
   const movies = await response.json();
-  const topMovies = movies.splice(153, 8);
+  const starting = Math.random() * (movies.length - 0) + 0;
+  const topMovies = movies.splice(starting, 8);
   const movieLst = topMovies.map((item) => ({
     y: item.imdb_rating,
     label: item.film_title
