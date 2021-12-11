@@ -89,7 +89,8 @@ async function dataHandler() {
       <div class="movieBox">
       <img src=${image2} alt=${'alt'}>
       </div>
-      <div class="filmMovie has-text-centered">${film.film_title} : Rating (${film.imdb_rating})<div>
+      <div class="filmMovie has-text-centered">${film.film_title} (${film.release_date.slice(0, 4)})</div>
+      <div> Rating: ${film.imdb_rating}  </div>
     </div>`;
       columns.innerHTML += html;
     } else {
@@ -98,7 +99,8 @@ async function dataHandler() {
       <div class="movieBox filmMovie">
       <img src=${image2} alt=${'alt'}>
       </div>
-      <div>${film.film_title} : Rating (${film.imdb_rating})<div>
+      <div>${film.film_title} (${film.release_date.slice(0, 4)}) </div>
+      <div> Rating: ${film.imdb_rating}  </div>
     </div>`;
       columns.innerHTML += html;
     }
