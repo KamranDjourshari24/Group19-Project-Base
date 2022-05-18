@@ -1,4 +1,6 @@
 /* eslint-disable no-console */
+import dotenv from 'dotenv';
+
 import express from 'express';
 import db from './server/database/initializeDB.js';
 import danielRoutes from './server/routes/danielRoutes.js';
@@ -9,6 +11,8 @@ import nickRoutes from './server/routes/nickroutes.js';
 import thirdPartyRoutes from './server/routes/thirdPartyRoutes.js';
 import udayRoutes from './server/routes/udayroutes.js';
 import top100Routes from './server/routes/top100Routes.js';
+
+dotenv.config();
 
 const app = express();
 

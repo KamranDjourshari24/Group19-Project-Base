@@ -1,23 +1,27 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 export default {
   development: {
-    username: 'ubuntu',
-    password: 'Veracrypt@12!',
-    database: 'imdb_database',
-    host: '18.212.135.23',
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
+    host: process.env.HOSTNAME,
     dialect: 'mysql'
   },
   test: {
-    username: 'ubuntu',
-    password: 'Veracrypt@12!',
-    database: 'imdb_database',
-    host: '18.212.135.23',
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
+    host: process.env.HOSTNAME,
     dialect: 'mysql'
   },
   production: {
-    username: 'ubuntu',
-    password: 'Veracrypt@12!',
-    database: 'imdb_database',
-    host: '18.212.135.23',
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
+    host: process.env.HOSTNAME,
     dialect: 'mysql'
   }
 };
